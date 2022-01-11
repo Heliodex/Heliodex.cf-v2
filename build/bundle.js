@@ -814,13 +814,14 @@ var app = (function () {
     	let a0;
     	let br6;
     	let t30;
-    	let br7;
-    	let t31;
     	let a1;
+    	let br7;
+    	let t32;
+    	let a2;
     	let br8;
-    	let t33;
-    	let br9;
     	let t34;
+    	let br9;
+    	let t35;
     	let div9;
     	let mounted;
     	let dispose;
@@ -899,15 +900,17 @@ var app = (function () {
     			a0 = element("a");
     			a0.textContent = "OldPFCalc.Heliodex.cf";
     			br6 = element("br");
-    			t30 = text("\n\t\tMade by Heliodex.");
-    			br7 = element("br");
-    			t31 = text("\n\t\tMy website: ");
+    			t30 = text("\n\t\tMade by Heliodex. See the code at: ");
     			a1 = element("a");
-    			a1.textContent = "Heliodex.cf";
+    			a1.textContent = "https://GitHub.com/Heliodex/PFRangeCalc";
+    			br7 = element("br");
+    			t32 = text("\n\t\tMy website: ");
+    			a2 = element("a");
+    			a2.textContent = "Heliodex.cf";
     			br8 = element("br");
-    			t33 = text("\n\t\tPlease contact me about any bugs that arise, or file an issue.");
+    			t34 = text("\n\t\tPlease contact me about any bugs that arise, or file an issue.");
     			br9 = element("br");
-    			t34 = space();
+    			t35 = space();
     			div9 = element("div");
     			attr_dev(h1, "class", "title svelte-1xw7xer");
     			add_location(h1, file, 115, 0, 1886);
@@ -969,12 +972,15 @@ var app = (function () {
     			attr_dev(a0, "class", "svelte-1xw7xer");
     			add_location(a0, file, 183, 45, 4081);
     			add_location(br6, file, 183, 111, 4147);
-    			add_location(br7, file, 184, 19, 4171);
-    			attr_dev(a1, "href", "https://heliodex.cf/");
+    			attr_dev(a1, "href", "https://github.com/Heliodex/PFRangeCalc");
     			attr_dev(a1, "class", "svelte-1xw7xer");
-    			add_location(a1, file, 185, 14, 4190);
-    			add_location(br8, file, 185, 60, 4236);
-    			add_location(br9, file, 186, 64, 4305);
+    			add_location(a1, file, 184, 37, 4189);
+    			add_location(br7, file, 184, 130, 4282);
+    			attr_dev(a2, "href", "https://heliodex.cf/");
+    			attr_dev(a2, "class", "svelte-1xw7xer");
+    			add_location(a2, file, 185, 14, 4301);
+    			add_location(br8, file, 185, 60, 4347);
+    			add_location(br9, file, 186, 64, 4416);
     			attr_dev(p7, "class", "svelte-1xw7xer");
     			add_location(p7, file, 181, 2, 3979);
     			attr_dev(div8, "class", "footer");
@@ -982,7 +988,7 @@ var app = (function () {
     			attr_dev(footer, "class", "svelte-1xw7xer");
     			add_location(footer, file, 178, 0, 3940);
     			attr_dev(div9, "class", "body svelte-1xw7xer");
-    			add_location(div9, file, 191, 0, 4336);
+    			add_location(div9, file, 191, 0, 4447);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1051,13 +1057,14 @@ var app = (function () {
     			append_dev(p7, a0);
     			append_dev(p7, br6);
     			append_dev(p7, t30);
-    			append_dev(p7, br7);
-    			append_dev(p7, t31);
     			append_dev(p7, a1);
+    			append_dev(p7, br7);
+    			append_dev(p7, t32);
+    			append_dev(p7, a2);
     			append_dev(p7, br8);
-    			append_dev(p7, t33);
+    			append_dev(p7, t34);
     			append_dev(p7, br9);
-    			insert_dev(target, t34, anchor);
+    			insert_dev(target, t35, anchor);
     			insert_dev(target, div9, anchor);
 
     			if (!mounted) {
@@ -1125,7 +1132,7 @@ var app = (function () {
     			if (detaching) detach_dev(br3);
     			if (detaching) detach_dev(t25);
     			if (detaching) detach_dev(footer);
-    			if (detaching) detach_dev(t34);
+    			if (detaching) detach_dev(t35);
     			if (detaching) detach_dev(div9);
     			mounted = false;
     			run_all(dispose);
