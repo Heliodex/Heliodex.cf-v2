@@ -180,7 +180,7 @@ Input the values for a gun, then press calculate.<br>
 	<br>
 	<div class="footer">
 		<p>
-		Version 2.0.0. Last updated 11th January 2022.<br>
+		Version 2.0.1. Last updated 11th January 2022.<br>
 		Built with Svelte. See the old version at: <a href="https://oldpfcalc.heliodex.cf/">OldPFCalc.Heliodex.cf</a><br>
 		Made by Heliodex. See the code at: <a href="https://github.com/Heliodex/PFRangeCalc">https://GitHub.com/Heliodex/PFRangeCalc</a><br>
 		My website: <a href="https://heliodex.cf/">Heliodex.cf</a><br>
