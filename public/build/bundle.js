@@ -374,7 +374,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "Please fill in all values";
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 173, 2, 3926);
+    			add_location(p, file, 173, 2, 3951);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -465,12 +465,12 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage up to ");
-    			t3 = text(/*final*/ ctx[8]);
+    			t3 = text(/*final*/ ctx[7]);
     			t4 = text(" studs");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 168, 5, 3819);
+    			add_location(p, file, 168, 5, 3844);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -481,8 +481,8 @@ var app = (function () {
     			append_dev(p, t4);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
-    			if (dirty & /*final*/ 256) set_data_dev(t3, /*final*/ ctx[8]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
+    			if (dirty & /*final*/ 128) set_data_dev(t3, /*final*/ ctx[7]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -511,10 +511,10 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage all ranges");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 166, 5, 3742);
+    			add_location(p, file, 166, 5, 3767);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -523,7 +523,7 @@ var app = (function () {
     			append_dev(p, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -554,12 +554,12 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage past ");
-    			t3 = text(/*final*/ ctx[8]);
+    			t3 = text(/*final*/ ctx[7]);
     			t4 = text(" studs");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 164, 5, 3628);
+    			add_location(p, file, 164, 5, 3653);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -570,8 +570,8 @@ var app = (function () {
     			append_dev(p, t4);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
-    			if (dirty & /*final*/ 256) set_data_dev(t3, /*final*/ ctx[8]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
+    			if (dirty & /*final*/ 128) set_data_dev(t3, /*final*/ ctx[7]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -600,10 +600,10 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage all ranges");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 161, 4, 3517);
+    			add_location(p, file, 161, 4, 3542);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -612,7 +612,7 @@ var app = (function () {
     			append_dev(p, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -642,11 +642,11 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Never deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage");
     			t3 = text(";");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 159, 4, 3407);
+    			add_location(p, file, 159, 4, 3432);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -656,7 +656,7 @@ var app = (function () {
     			insert_dev(target, t3, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -686,10 +686,10 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage all ranges");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 156, 3, 3287);
+    			add_location(p, file, 156, 3, 3312);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -698,7 +698,7 @@ var app = (function () {
     			append_dev(p, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -727,10 +727,10 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t0 = text("Never deals ");
-    			t1 = text(/*finalDamage*/ ctx[7]);
+    			t1 = text(/*finalDamage*/ ctx[8]);
     			t2 = text(" damage");
     			attr_dev(p, "class", "answer svelte-1q05zo3");
-    			add_location(p, file, 154, 3, 3127);
+    			add_location(p, file, 154, 3, 3152);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -739,7 +739,7 @@ var app = (function () {
     			append_dev(p, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*finalDamage*/ 128) set_data_dev(t1, /*finalDamage*/ ctx[7]);
+    			if (dirty & /*finalDamage*/ 256) set_data_dev(t1, /*finalDamage*/ ctx[8]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -913,82 +913,82 @@ var app = (function () {
     			t35 = space();
     			div9 = element("div");
     			attr_dev(h1, "class", "title svelte-1q05zo3");
-    			add_location(h1, file, 116, 0, 1951);
-    			add_location(br0, file, 119, 96, 2095);
-    			add_location(br1, file, 120, 49, 2149);
+    			add_location(h1, file, 116, 0, 1976);
+    			add_location(br0, file, 119, 96, 2120);
+    			add_location(br1, file, 120, 49, 2174);
     			attr_dev(p0, "class", "svelte-1q05zo3");
-    			add_location(p0, file, 118, 0, 1995);
-    			add_location(br2, file, 123, 0, 2160);
+    			add_location(p0, file, 118, 0, 2020);
+    			add_location(br2, file, 123, 0, 2185);
     			attr_dev(p1, "class", "label svelte-1q05zo3");
-    			add_location(p1, file, 127, 3, 2231);
+    			add_location(p1, file, 127, 3, 2256);
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "class", "svelte-1q05zo3");
-    			add_location(input0, file, 128, 3, 2275);
+    			add_location(input0, file, 128, 3, 2300);
     			attr_dev(div0, "class", "value svelte-1q05zo3");
-    			add_location(div0, file, 126, 2, 2208);
+    			add_location(div0, file, 126, 2, 2233);
     			attr_dev(p2, "class", "label svelte-1q05zo3");
-    			add_location(p2, file, 131, 3, 2354);
+    			add_location(p2, file, 131, 3, 2379);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "class", "svelte-1q05zo3");
-    			add_location(input1, file, 132, 3, 2397);
+    			add_location(input1, file, 132, 3, 2422);
     			attr_dev(div1, "class", "value svelte-1q05zo3");
-    			add_location(div1, file, 130, 2, 2331);
+    			add_location(div1, file, 130, 2, 2356);
     			attr_dev(p3, "class", "label svelte-1q05zo3");
-    			add_location(p3, file, 135, 3, 2474);
+    			add_location(p3, file, 135, 3, 2499);
     			attr_dev(input2, "type", "number");
     			attr_dev(input2, "class", "svelte-1q05zo3");
-    			add_location(input2, file, 136, 3, 2518);
+    			add_location(input2, file, 136, 3, 2543);
     			attr_dev(div2, "class", "value svelte-1q05zo3");
-    			add_location(div2, file, 134, 2, 2451);
+    			add_location(div2, file, 134, 2, 2476);
     			attr_dev(p4, "class", "label svelte-1q05zo3");
-    			add_location(p4, file, 139, 3, 2596);
+    			add_location(p4, file, 139, 3, 2621);
     			attr_dev(input3, "type", "number");
     			attr_dev(input3, "class", "svelte-1q05zo3");
-    			add_location(input3, file, 140, 3, 2641);
+    			add_location(input3, file, 140, 3, 2666);
     			attr_dev(div3, "class", "value svelte-1q05zo3");
-    			add_location(div3, file, 138, 2, 2573);
+    			add_location(div3, file, 138, 2, 2598);
     			attr_dev(p5, "class", "label svelte-1q05zo3");
-    			add_location(p5, file, 143, 3, 2717);
+    			add_location(p5, file, 143, 3, 2742);
     			attr_dev(input4, "type", "number");
     			attr_dev(input4, "class", "svelte-1q05zo3");
-    			add_location(input4, file, 144, 3, 2760);
+    			add_location(input4, file, 144, 3, 2785);
     			attr_dev(div4, "class", "value svelte-1q05zo3");
-    			add_location(div4, file, 142, 2, 2694);
+    			add_location(div4, file, 142, 2, 2719);
     			attr_dev(p6, "class", "label svelte-1q05zo3");
-    			add_location(p6, file, 147, 3, 2838);
+    			add_location(p6, file, 147, 3, 2863);
     			attr_dev(input5, "type", "number");
     			attr_dev(input5, "class", "svelte-1q05zo3");
-    			add_location(input5, file, 148, 3, 2878);
+    			add_location(input5, file, 148, 3, 2903);
     			attr_dev(div5, "class", "value svelte-1q05zo3");
-    			add_location(div5, file, 146, 2, 2815);
+    			add_location(div5, file, 146, 2, 2840);
     			attr_dev(div6, "class", "values svelte-1q05zo3");
-    			add_location(div6, file, 125, 1, 2185);
+    			add_location(div6, file, 125, 1, 2210);
     			attr_dev(div7, "class", "main svelte-1q05zo3");
-    			add_location(div7, file, 124, 0, 2165);
-    			add_location(br3, file, 177, 0, 3990);
-    			add_location(br4, file, 180, 1, 4006);
-    			add_location(br5, file, 183, 48, 4087);
+    			add_location(div7, file, 124, 0, 2190);
+    			add_location(br3, file, 177, 0, 4015);
+    			add_location(br4, file, 180, 1, 4031);
+    			add_location(br5, file, 183, 48, 4112);
     			attr_dev(a0, "href", "https://oldpfcalc.heliodex.cf/");
     			attr_dev(a0, "class", "svelte-1q05zo3");
-    			add_location(a0, file, 184, 45, 4137);
-    			add_location(br6, file, 184, 111, 4203);
+    			add_location(a0, file, 184, 45, 4162);
+    			add_location(br6, file, 184, 111, 4228);
     			attr_dev(a1, "href", "https://github.com/Heliodex/PFRangeCalc");
     			attr_dev(a1, "class", "svelte-1q05zo3");
-    			add_location(a1, file, 185, 37, 4245);
-    			add_location(br7, file, 185, 130, 4338);
+    			add_location(a1, file, 185, 37, 4270);
+    			add_location(br7, file, 185, 130, 4363);
     			attr_dev(a2, "href", "https://heliodex.cf/");
     			attr_dev(a2, "class", "svelte-1q05zo3");
-    			add_location(a2, file, 186, 14, 4357);
-    			add_location(br8, file, 186, 60, 4403);
-    			add_location(br9, file, 187, 64, 4472);
+    			add_location(a2, file, 186, 14, 4382);
+    			add_location(br8, file, 186, 60, 4428);
+    			add_location(br9, file, 187, 64, 4497);
     			attr_dev(p7, "class", "svelte-1q05zo3");
-    			add_location(p7, file, 182, 2, 4035);
+    			add_location(p7, file, 182, 2, 4060);
     			attr_dev(div8, "class", "footer");
-    			add_location(div8, file, 181, 1, 4012);
+    			add_location(div8, file, 181, 1, 4037);
     			attr_dev(footer, "class", "svelte-1q05zo3");
-    			add_location(footer, file, 179, 0, 3996);
+    			add_location(footer, file, 179, 0, 4021);
     			attr_dev(div9, "class", "body svelte-1q05zo3");
-    			add_location(div9, file, 192, 0, 4503);
+    			add_location(div9, file, 192, 0, 4528);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1218,8 +1218,8 @@ var app = (function () {
     		if ('multiplier' in $$props) $$invalidate(4, multiplier = $$props.multiplier);
     		if ('damageToFind' in $$props) $$invalidate(5, damageToFind = $$props.damageToFind);
     		if ('opt' in $$props) $$invalidate(6, opt = $$props.opt);
-    		if ('final' in $$props) $$invalidate(8, final = $$props.final);
-    		if ('finalDamage' in $$props) $$invalidate(7, finalDamage = $$props.finalDamage);
+    		if ('final' in $$props) $$invalidate(7, final = $$props.final);
+    		if ('finalDamage' in $$props) $$invalidate(8, finalDamage = $$props.finalDamage);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1232,11 +1232,11 @@ var app = (function () {
     		}
 
     		if ($$self.$$.dirty & /*opt*/ 64) {
-    			$$invalidate(8, final = opt.toFixed(2));
+    			$$invalidate(7, final = parseFloat(opt.toFixed(2)));
     		}
 
-    		if ($$self.$$.dirty & /*finalDamage, multiplier*/ 144) {
-    			$$invalidate(7, finalDamage = (finalDamage * multiplier).toFixed(2));
+    		if ($$self.$$.dirty & /*damageToFind, multiplier*/ 48) {
+    			$$invalidate(8, finalDamage = parseFloat((damageToFind * multiplier).toFixed(2)));
     		}
     	};
 
@@ -1248,8 +1248,8 @@ var app = (function () {
     		multiplier,
     		damageToFind,
     		opt,
-    		finalDamage,
     		final,
+    		finalDamage,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
