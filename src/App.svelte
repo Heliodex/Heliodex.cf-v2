@@ -117,7 +117,7 @@
 
 <p>
 This tool calculates how many studs a weapon in Phantom Forces will deal an amount of damage to.<br>
-Input the values for a gun, then press calculate.<br>
+Input the values for a gun and the tool will calculate the damage dealt at a specified distance with a specified multiplier.<br>
 </p>
 
 <br>
