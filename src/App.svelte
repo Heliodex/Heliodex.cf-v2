@@ -10,6 +10,7 @@
 
 	$: opt = (closeRange + ((closeDamage - damageToFind / multiplier) / (closeDamage - farDamage)) * (farRange - closeRange));
 	$: final = opt.toFixed(2);
+	$: finalDamage = (finalDamage).toFixed(2);
 </script>
 
 <style lang="sass">
@@ -150,21 +151,21 @@ Input the values for a gun, then press calculate.<br>
 
 	{#if closeDamage && farDamage && closeRange && farRange && multiplier && damageToFind}
 		{#if (closeDamage * multiplier) < damageToFind && (farDamage * multiplier) < damageToFind }
-			<p class="answer"> Never deals {damageToFind} damage</p>
+			<p class="answer"> Never deals {finalDamage} damage</p>
 		{:else if (closeDamage * multiplier) >= damageToFind && (farDamage * multiplier) >= damageToFind }
-			<p class="answer"> Deals {damageToFind} damage all ranges</p>
+			<p class="answer"> Deals {finalDamage} damage all ranges</p>
 		{:else}
 			{#if opt < closeRange && opt < farRange }
-				<p class="answer">Never deals {damageToFind} damage</p>;
+				<p class="answer">Never deals {finalDamage} damage</p>;
 			{:else if opt > closeRange && opt > farRange }
-				<p class="answer">Deals " {damageToFind} damage all ranges</p>
+				<p class="answer">Deals {finalDamage} damage all ranges</p>
 			{:else}
 				{#if farDamage > closeDamage }
-					<p class="answer">Deals {damageToFind} damage past {final} studs</p>
+					<p class="answer">Deals {finalDamage} damage past {final} studs</p>
 				{:else if farDamage == closeDamage }
-					<p class="answer">Deals {damageToFind} damage all ranges</p>
+					<p class="answer">Deals {finalDamage} damage all ranges</p>
 				{:else}
-					<p class="answer">Deals {damageToFind} damage up to {final} studs</p>
+					<p class="answer">Deals {finalDamage} damage up to {final} studs</p>
 				{/if}
 			{/if}
 		{/if}
@@ -181,7 +182,7 @@ Input the values for a gun, then press calculate.<br>
 		<p>
 		Version 2.0.0. Last updated 11th January 2022.<br>
 		Built with Svelte. See the old version at: <a href="https://oldpfcalc.heliodex.cf/">OldPFCalc.Heliodex.cf</a><br>
-		Made by Heliodex.<br>
+		Made by Heliodex. See the code at: <a href="https://github.com/Heliodex/PFRangeCalc">https://GitHub.com/Heliodex/PFRangeCalc</a><br>
 		My website: <a href="https://heliodex.cf/">Heliodex.cf</a><br>
 		Please contact me about any bugs that arise, or file an issue.<br>
 		</p>
