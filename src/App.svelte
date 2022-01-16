@@ -10,7 +10,7 @@
 
 	$: opt = (closeRange + ((closeDamage - damageToFind / multiplier) / (closeDamage - farDamage)) * (farRange - closeRange));
 	$: final = parseFloat(opt.toFixed(2));
-	$: finalDamage = parseFloat((damageToFind * multiplier).toFixed(2));
+	$: finalDamage = parseFloat((damageToFind).toFixed(2));
 </script>
 
 <style lang="sass">
