@@ -10,7 +10,7 @@
 
 	$: opt = (closeRange + ((closeDamage - damageToFind / multiplier) / (closeDamage - farDamage)) * (farRange - closeRange));
 	$: final = opt.toFixed(2);
-	$: finalDamage = (finalDamage).toFixed(2);
+	$: finalDamage = (finalDamage * multiplier).toFixed(2);
 </script>
 
 <style lang="sass">
@@ -19,8 +19,8 @@
 		src: url('/heliodex.ttf')
 
 	@font-face
-		font-family: "lexendDeca"
-		src: url('/lexend.ttf')
+		font-family: "ReadexPro"
+		src: url('/ReadexPro-Regular.ttf')
 
 
 	.body // solution to white borders
@@ -36,7 +36,7 @@
 	p
 		color: #e3e3e3
 
-		font-family: lexendDeca, sans-serif
+		font-family: ReadexPro, sans-serif
 
 		text-align: center
 		float: center
@@ -52,7 +52,7 @@
 		outline: none
 		width: 175px
 
-		font-family: lexendDeca, sans-serif
+		font-family: ReadexPro, sans-serif
 
 
 	.label
