@@ -4,7 +4,7 @@
 	let closeRange = 70;
 	let farRange = 120;
 	let multiplier = 1;
-	let damageToFind = 25;
+	let damageToFind = 2;
 	let opt;
 	let final;
 
