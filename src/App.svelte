@@ -1,16 +1,4 @@
 <script>
-	let closeDamage = 33;
-	let farDamage = 20;
-	let closeRange = 70;
-	let farRange = 120;
-	let multiplier = 1;
-	let damageToFind = 25;
-	let opt;
-	let final;
-
-	$: opt = (closeRange + ((closeDamage - damageToFind / multiplier) / (closeDamage - farDamage)) * (farRange - closeRange));
-	$: final = parseFloat(opt.toFixed(2));
-	$: finalDamage = parseFloat((damageToFind).toFixed(2));
 </script>
 
 <style lang="sass">
@@ -19,174 +7,135 @@
 		src: url('/heliodex.ttf')
 
 	@font-face
-		font-family: "ReadexPro"
-		src: url('/ReadexPro-Regular.ttf')
+		font-family: "lexendDeca" /* Readex Pro might actually be a better font than Lexend. */
+		src: url('/ReadexPro.ttf')
 
+	body
+		background-color: #303030
+		color: #e3e3e3
 
-	.body // solution to white borders
-		position: fixed
-		height: 100%
-		width: 100%
-		background-color: #121212
-		transform: translate(-8px) // WORST SOLUTION EVER. Otherwise there would be a white border on the left side.
+		text-align: left
 
-
-		top: 0
-		z-index: -1
 	p
-		color: #e3e3e3
-
-		font-family: ReadexPro, sans-serif
-
-		text-align: center
-		float: center
+		display: inline
 
 
-	input
-		border: 0px solid #ffffff
-		padding: 5px 10px
-		margin: 5px 2px
-		border-radius: 8px
-		background-color: #404040
-		color: #e3e3e3
-		outline: none
-		width: 175px
-
-		font-family: ReadexPro, sans-serif
-
-
-	.label
-		border: 0px solid #ffffff
-		padding: 0px
-		margin: 0px
+	a:link 
+		color: cyan
+		background-color: transparent
+		text-decoration: underline
+	a:visited 
+		color: palevioletred
+		background-color: transparent
+		text-decoration: underline
+	a:hover 
+		color: red
+		background-color: transparent
+		text-decoration: underline
+	a:active 
+		color: yellow
+		background-color: transparent
+		text-decoration: underline
 
 	.title
 		font-family: Heliodex, 'Trebuchet MS', sans-serif
 		font-size: 48px
-		line-height: 38px
-		font-weight: normal
+		line-height: 0px
+		text-align: center
 
+		display: block
+
+	.headerbutton // Stolen straight from DocSocial. lmao
+		border: 0px solid #ffffff
+		background-color: #343434
+		margin: 5px
+		margin-bottom: 0px
+		max-width: 150px
+		border-radius: 5px
+		font-family: lexendDeca
+		font-size: 14px
+		padding-bottom: 22px
+		padding-top: 5px
+		height: 20px
+		cursor: pointer
+		position: relative
 		color: #e3e3e3
-		text-align: center
+		width:70px
 
-	.main
-		background-color: #202020
-		max-width: 450px
-		min-width: 200px
-		padding: 30px 10px
-		border-radius: 8px
-		float: center
-		text-align: center
+	button:hover
+		transition: transform 0.2s
+		transform: scale(1.1)
+		background-color: #303030
 
-		margin: auto
-		width: 50%
+	.main 
+		margin: 0px 0px 15px 100px /* Width of the sidebar +15 */
 
-	.value
-		margin: 10px 0px
+	/* The sidebar menu */
+	.sidenav
+		height: 100%
+		width: 85px // Sidebar width
+		position: fixed // Stay in place when scrolling
+		z-index: 1 // Stay on top
+		top: 0 //*Stay at the top
+		left: 0
+		background-color: #121212
+		overflow-x: hidden // Disable horizontal scroll
+		padding-top: 20px
+		padding-left: 5px
 
-	@media screen and (min-width: 800px) 
-		.values
+	/* *
+		box-sizing: border-box what it do? */
+
+
+	/* Page dual-column code */
+	@media screen and (min-width: 800px)
+		.projects 
 			display: grid
 			grid-template-columns: auto auto
 
-	a
-		&:link
-			color: cyan
-		&:visited 
-			color: palevioletred
-		&:hover 
-			color: red
-		&:active 
-			color: yellow
+	.project
+		grid-column-gap: 100px
+		padding: 0px 5% 50px 0px
 
-		background-color: transparent
-		text-decoration: underline
+	/* Clear floats after the columns */
+	.row:after
+		content: ""
+		clear: both
+		display: flex
+		flex-wrap: wrap
+		flex-direction: row
 
-	footer
-			background-color: #171717
-			color: #e3e3e3 !important
-			margin-top: 20px
-			height: 18%
-			width: 100%
-			position: fixed
-			bottom: 0
+	.lexend 
+		font-family: lexendDeca, sans-serif
 
+	.ipa
+		font-family: Helvetica, Arial,  /* supports phonetic chars */ sans-serif
+		line-height: 0px
+		font-size: 16px
 </style>
 
-<h1 class="title">PF Range Calculator</h1>
 
-<p>
-This tool calculates how many studs a weapon in Phantom Forces will deal an amount of damage to.<br>
-Input the values for a gun, and the tool will calculate the damage dealt at a specified distance with a specified multiplier.<br>
-</p>
+<body>
+	<div class="sidenav">
+		<!-- Page side navigation buttons go in this div -->
 
-<br>
-<div class="main">
-	<div class="values">
-		<div class="value">
-			<p class="label">Close-range damage:</p>
-			<input type=number bind:value={closeDamage}>
-		</div>
-		<div class="value">
-			<p class="label">Long-range damage:</p>
-			<input type=number bind:value={farDamage}>
-		</div>
-		<div class="value">
-			<p class="label">First range number:</p>
-			<input type=number bind:value={closeRange}>
-		</div>
-		<div class="value">
-			<p class="label">Second range number:</p>
-			<input type=number bind:value={farRange}>
-		</div>
-		<div class="value">
-			<p class="label">Damage multiplier:</p>
-			<input type=number bind:value={multiplier}>
-		</div>
-		<div class="value">
-			<p class="label">Damage to Find:</p>
-			<input type=number bind:value={damageToFind}>
-		</div>
+		<img src="/heliodex.png" alt="Heliodex Logo" width="80" height="80">
+		
+		<button class="headerbutton" onclick="location.href='/'" type="button">Home</button>
+		<button class="headerbutton" onclick="location.href='/projects'" type="button">Projects</button>
+		<button class="headerbutton" onclick="location.href='/about'" type="button">About</button>
+		<button class="headerbutton" onclick="location.href='/contact'" type="button">Contact</button>
+		
 	</div>
 
-	{#if closeDamage && farDamage && closeRange && farRange && multiplier && damageToFind}
-		{#if (closeDamage * multiplier) < damageToFind && (farDamage * multiplier) < damageToFind }
-			<p class="answer"> Never deals {finalDamage} damage</p>
-		{:else if (closeDamage * multiplier) >= damageToFind && (farDamage * multiplier) >= damageToFind }
-			<p class="answer"> Deals {finalDamage} damage all ranges</p>
-		{:else}
-			{#if opt < closeRange && opt < farRange }
-				<p class="answer">Never deals {finalDamage} damage</p>;
-			{:else if opt > closeRange && opt > farRange }
-				<p class="answer">Deals {finalDamage} damage all ranges</p>
-			{:else}
-				{#if farDamage > closeDamage }
-					<p class="answer">Deals {finalDamage} damage past {final} studs</p>
-				{:else if farDamage == closeDamage }
-					<p class="answer">Deals {finalDamage} damage all ranges</p>
-				{:else}
-					<p class="answer">Deals {finalDamage} damage up to {final} studs</p>
-				{/if}
-			{/if}
-		{/if}
-	{:else}
-		<p class="answer">Please fill in all values</p>
-	{/if}
-</div>	
-
-<br>
-
-<footer>
-	<br>
-	<div class="footer">
-		<p>
-		Version 2.0.1. Last updated 11th January 2022.<br>
-		Built with Svelte. See the old version at: <a href="https://oldpfcalc.heliodex.cf/">OldPFCalc.Heliodex.cf</a><br>
-		Made by Heliodex. See the code at: <a href="https://github.com/Heliodex/PFRangeCalc">https://GitHub.com/Heliodex/PFRangeCalc</a><br>
-		My website: <a href="https://heliodex.cf/">Heliodex.cf</a><br>
-		Please contact me about any bugs that arise, or file an issue.<br>
+	
+	<div class="main">
+		<!-- Main page body goes in this div -->	
+		<p class="title">Heliodex.cf</p><br>
+		<p class="lexend">
+		<br>
+		Welcome to Heliodex.cf!<br>
+		This is my portfolio page where you can see the projects that I've worked on, the teams that I've worked in, and how to contact me.<br>
 		</p>
 	</div>
-</footer>
-
-<div class="body"></div>
+</body>
