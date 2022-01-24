@@ -1,12 +1,6 @@
-<script>
-	import Sidenav from './Sidenav.svelte';
-</script>
-
 <style lang="sass">
 	@import src/style.sass
 </style>
-
-<Sidenav />
 
 <div class="main">
 	<h1>Heliodex.cf</h1>
