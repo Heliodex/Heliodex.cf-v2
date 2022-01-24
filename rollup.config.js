@@ -33,7 +33,7 @@ function serve() {
 }
 
 export default {
-	//external: ['App.svelte'], // <-- suppresses the warning
+	external: ['App.svelte'], // <-- suppresses the warning "unresolved dependencies"
 	input: 'src/main.ts',
 	output: {
 		sourcemap: true,
