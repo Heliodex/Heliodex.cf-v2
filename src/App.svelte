@@ -1,119 +1,12 @@
 <script>
+	import Router from './routes/index.svelte';
+
+	import { Link } from 'svelte-routing';
 </script>
 
 <style lang="sass">
-	@font-face
-		font-family: "Heliodex"
-		src: url('/heliodex.ttf')
-
-	@font-face
-		font-family: "lexendDeca" /* Readex Pro might actually be a better font than Lexend. */
-		src: url('/ReadexPro.ttf')
-
-	body
-		background-color: #303030
-		color: #e3e3e3
-
-		text-align: left
-
-	p
-		display: inline
-
-
-	a:link 
-		color: cyan
-		background-color: transparent
-		text-decoration: underline
-	a:visited 
-		color: palevioletred
-		background-color: transparent
-		text-decoration: underline
-	a:hover 
-		color: red
-		background-color: transparent
-		text-decoration: underline
-	a:active 
-		color: yellow
-		background-color: transparent
-		text-decoration: underline
-
-	.title
-		font-family: Heliodex, 'Trebuchet MS', sans-serif
-		font-size: 48px
-		line-height: 0px
-		text-align: center
-
-		display: block
-
-	.headerbutton // Stolen straight from DocSocial. lmao
-		border: 0px solid #ffffff
-		background-color: #343434
-		margin: 5px
-		margin-bottom: 0px
-		max-width: 150px
-		border-radius: 5px
-		font-family: lexendDeca
-		font-size: 14px
-		padding-bottom: 22px
-		padding-top: 5px
-		height: 20px
-		cursor: pointer
-		position: relative
-		color: #e3e3e3
-		width:70px
-
-	button:hover
-		transition: transform 0.2s
-		transform: scale(1.1)
-		background-color: #303030
-
-	.main 
-		margin: 0px 0px 15px 100px /* Width of the sidebar +15 */
-
-	/* The sidebar menu */
-	.sidenav
-		height: 100%
-		width: 85px // Sidebar width
-		position: fixed // Stay in place when scrolling
-		z-index: 1 // Stay on top
-		top: 0 //*Stay at the top
-		left: 0
-		background-color: #121212
-		overflow-x: hidden // Disable horizontal scroll
-		padding-top: 20px
-		padding-left: 5px
-
-	/* *
-		box-sizing: border-box what it do? */
-
-
-	/* Page dual-column code */
-	@media screen and (min-width: 800px)
-		.projects 
-			display: grid
-			grid-template-columns: auto auto
-
-	.project
-		grid-column-gap: 100px
-		padding: 0px 5% 50px 0px
-
-	/* Clear floats after the columns */
-	.row:after
-		content: ""
-		clear: both
-		display: flex
-		flex-wrap: wrap
-		flex-direction: row
-
-	.lexend 
-		font-family: lexendDeca, sans-serif
-
-	.ipa
-		font-family: Helvetica, Arial,  /* supports phonetic chars */ sans-serif
-		line-height: 0px
-		font-size: 16px
+	@import src/style.sass
 </style>
-
 
 <body>
 	<div class="sidenav">
@@ -121,21 +14,15 @@
 
 		<img src="/heliodex.png" alt="Heliodex Logo" width="80" height="80">
 		
-		<button class="headerbutton" onclick="location.href='/'" type="button">Home</button>
-		<button class="headerbutton" onclick="location.href='/projects'" type="button">Projects</button>
-		<button class="headerbutton" onclick="location.href='/about'" type="button">About</button>
-		<button class="headerbutton" onclick="location.href='/contact'" type="button">Contact</button>
+		<Link class="headerbutton" To="/">Home</Link>
+		<Link class="headerbutton" To="projects">Projects</Link>
+		<Link class="headerbutton" To="about">About</Link>
+		<Link class="headerbutton" To="contact">Contact</Link>
 		
 	</div>
 
 	
 	<div class="main">
-		<!-- Main page body goes in this div -->	
-		<p class="title">Heliodex.cf</p><br>
-		<p class="lexend">
-		<br>
-		Welcome to Heliodex.cf!<br>
-		This is my portfolio page where you can see the projects that I've worked on, the teams that I've worked in, and how to contact me.<br>
-		</p>
+		<Router/>
 	</div>
 </body>
