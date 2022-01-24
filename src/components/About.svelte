@@ -1,5 +1,4 @@
 <script>
-	import { link } from 'svelte-routing';
 	import Sidenav from './Sidenav.svelte';
 </script>
 

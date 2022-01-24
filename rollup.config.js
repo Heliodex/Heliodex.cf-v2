@@ -7,6 +7,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import autoPreprocess from 'svelte-preprocess';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -32,6 +33,7 @@ function serve() {
 }
 
 export default {
+	//external: ['App.svelte'], // <-- suppresses the warning
 	input: 'src/main.ts',
 	output: {
 		sourcemap: true,
@@ -85,7 +87,9 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+		nodeResolve(),
 	],
 	watch: {
 		clearScreen: false

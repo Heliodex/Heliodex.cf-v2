@@ -1,5 +1,10 @@
 <script>
-	import Router from './routes/index.svelte';
+	import Home from "/components/Home.svelte";
+	import Projects from "/components/Projects.svelte";
+	import About from "/components/About.svelte";
+	import Contact from "/components/Contact.svelte";
+
+	import Sidenav from "/components/Sidenav.svelte";
 </script>
 
 <style lang="sass">
@@ -7,5 +12,5 @@
 </style>
 
 <body>
-	<Router />
+	bing bing bong bong<br>
 </body>

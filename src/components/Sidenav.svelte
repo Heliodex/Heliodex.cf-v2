@@ -1,5 +1,13 @@
 <script>
-	import { link } from 'svelte-routing';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	function forward(component) {
+		dispatch("pageChange", {
+			component: component
+		});
+	}
 </script>
 
 <style lang="sass">
@@ -11,8 +19,8 @@
 
 	<img src="/heliodex.png" alt="Heliodex Logo" width="80" height="80">
 
-	<a use:link class="sidebarLink" href="/">Home</a>
-	<a use:link class="sidebarLink" href="projects">Projects</a>
-	<a use:link class="sidebarLink" href="about">About</a>
-	<a use:link class="sidebarLink" href="contact">Contact</a>
+	<button class="sidebarLink"  on:click={forward("<Home />")} type="button">Home</button>
+	<button class="sidebarLink"  on:click={forward("<Projects />")} type="button">Projects</button>
+	<button class="sidebarLink"  on:click={forward("<About />")} type="button">About</button>
+	<button class="sidebarLink"  on:click={forward("<Contact />")} type="button">Contact</button>
 </div>
