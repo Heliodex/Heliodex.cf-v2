@@ -16,19 +16,19 @@ p
 	display: inline
 	font-family: lexendDeca, sans-serif
 
-a:link 
+.realLink:link 
 	color: cyan
 	background-color: transparent
 	text-decoration: underline
-a:visited 
+.realLink:visited 
 	color: palevioletred
 	background-color: transparent
 	text-decoration: underline
-a:hover 
+.realLink:hover 
 	color: red
 	background-color: transparent
 	text-decoration: underline
-a:active 
+.realLink:active 
 	color: yellow
 	background-color: transparent
 	text-decoration: underline
@@ -42,24 +42,28 @@ h1
 
 	display: block
 
-.headerbutton // Stolen straight from DocSocial. lmao
+h3
+	font-family: lexendDeca, sans-serif
+
+.sidebarLink // Stolen straight from DocSocial. lmao
 	border: 0px solid #ffffff
 	background-color: #404040
 	margin: 5px
 	margin-bottom: 0px
-	max-width: 150px
 	border-radius: 5px
 	font-family: lexendDeca
 	font-size: 14px
-	padding-bottom: 22px
-	padding-top: 5px
+	padding: 3px 0
 	height: 20px
 	cursor: pointer
-	position: relative
 	color: #e3e3e3
-	width:70px
+	width: 70px
+	display: inline-block
 
-button:hover
+	text-align: center
+	text-decoration: none
+
+.sidebarLink:hover
 	transition: transform 0.2s
 	transform: scale(1.1)
 	background-color: #303030
