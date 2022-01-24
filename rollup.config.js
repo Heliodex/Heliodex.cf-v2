@@ -6,8 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
-import autoPreprocess from 'svelte-preprocess';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+
+import { scss } from 'svelte-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -33,7 +33,6 @@ function serve() {
 }
 
 export default {
-	external: ['App.svelte'], // <-- suppresses the warning "unresolved dependencies"
 	input: 'src/main.ts',
 	output: {
 		sourcemap: true,
@@ -43,8 +42,8 @@ export default {
 	},
 	plugins: [
 		svelte({
-			preprocess: autoPreprocess(),
-			preprocess: sveltePreprocess({ sourceMap: !production }),
+			preprocess: sveltePreprocess(),
+
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
@@ -87,9 +86,7 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser(),
-
-		nodeResolve(),
+		production && terser()
 	],
 	watch: {
 		clearScreen: false
