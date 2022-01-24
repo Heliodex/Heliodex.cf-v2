@@ -24,8 +24,19 @@ var app = (function () {
     function safe_not_equal(a, b) {
         return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
     }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
+    }
     function is_empty(obj) {
         return Object.keys(obj).length === 0;
+    }
+    function append(target, node) {
+        target.appendChild(node);
     }
     function insert(target, node, anchor) {
         target.insertBefore(node, anchor || null);
@@ -35,6 +46,12 @@ var app = (function () {
     }
     function element(name) {
         return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
     }
     function attr(node, attribute, value) {
         if (value == null)
@@ -273,6 +290,10 @@ var app = (function () {
     function dispatch_dev(type, detail) {
         document.dispatchEvent(custom_event(type, Object.assign({ version: '3.46.2' }, detail), true));
     }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
     function insert_dev(target, node, anchor) {
         dispatch_dev('SvelteDOMInsert', { target, node, anchor });
         insert(target, node, anchor);
@@ -321,19 +342,72 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let body;
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let button0;
+    	let t2;
+    	let button1;
+    	let t4;
+    	let button2;
+    	let t6;
+    	let button3;
 
     	const block = {
     		c: function create() {
     			body = element("body");
-    			body.textContent = "tdh";
-    			attr_dev(body, "class", "svelte-tvybwj");
-    			add_location(body, file, 128, 0, 2119);
+    			div = element("div");
+    			img = element("img");
+    			t0 = space();
+    			button0 = element("button");
+    			button0.textContent = "Home";
+    			t2 = space();
+    			button1 = element("button");
+    			button1.textContent = "Projects";
+    			t4 = space();
+    			button2 = element("button");
+    			button2.textContent = "About";
+    			t6 = space();
+    			button3 = element("button");
+    			button3.textContent = "Contact";
+    			if (!src_url_equal(img.src, img_src_value = "/heliodex.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "Heliodex Logo");
+    			attr_dev(img, "width", "80");
+    			attr_dev(img, "height", "80");
+    			add_location(img, file, 132, 2, 2215);
+    			attr_dev(button0, "class", "sideButton svelte-1d319d3");
+    			attr_dev(button0, "href", "/");
+    			add_location(button0, file, 134, 2, 2289);
+    			attr_dev(button1, "class", "sideButton svelte-1d319d3");
+    			attr_dev(button1, "href", "projects");
+    			add_location(button1, file, 135, 2, 2342);
+    			attr_dev(button2, "class", "sideButton svelte-1d319d3");
+    			attr_dev(button2, "href", "about");
+    			add_location(button2, file, 136, 2, 2406);
+    			attr_dev(button3, "class", "sideButton svelte-1d319d3");
+    			attr_dev(button3, "href", "contact");
+    			add_location(button3, file, 137, 2, 2464);
+    			attr_dev(div, "class", "sidenav svelte-1d319d3");
+    			add_location(div, file, 129, 1, 2131);
+    			attr_dev(body, "class", "svelte-1d319d3");
+    			add_location(body, file, 128, 0, 2122);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, body, anchor);
+    			append_dev(body, div);
+    			append_dev(div, img);
+    			append_dev(div, t0);
+    			append_dev(div, button0);
+    			append_dev(div, t2);
+    			append_dev(div, button1);
+    			append_dev(div, t4);
+    			append_dev(div, button2);
+    			append_dev(div, t6);
+    			append_dev(div, button3);
     		},
     		p: noop,
     		i: noop,
