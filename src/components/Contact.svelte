@@ -1,9 +1,11 @@
 <script>
-  import { Link } from 'svelte-routing';
+	import { Link } from 'svelte-routing';
 </script>
 
 <div>
-  <h3>This is HomePage</h3>
-  <Link to="blog">Blog</Link><br />
-  <Link to="about">About</Link>
+	<h3>This is Contact Page</h3>
+	<Link class="headerbutton" To="/">Home</Link>
+	<Link class="headerbutton" To="projects">Projects</Link>
+	<Link class="headerbutton" To="about">About</Link>
+	<Link class="headerbutton" To="contact">Contact</Link>
 </div>
