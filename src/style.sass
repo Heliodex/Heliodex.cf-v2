@@ -1,3 +1,6 @@
+
+$button-width: 70px	
+	
 @font-face
 	font-family: "Heliodex"
 	src: url('/heliodex.ttf')
@@ -15,6 +18,16 @@ body
 p
 	display: inline
 	font-family: lexendDeca, sans-serif
+
+.version
+	text-align: center
+	display: inline-block
+	margin: auto
+
+	position: fixed
+	bottom: 0 // fix to bottom of page
+	left: 0 // be inside rather than outside the sidebar
+	width: $button-width
 
 .realLink:link 
 	color: cyan
@@ -56,7 +69,7 @@ h3
 	height: 20px
 	cursor: pointer
 	color: #e3e3e3
-	width: 70px
+	width: $button-width
 	display: inline-block
 
 	text-align: center

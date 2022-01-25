@@ -25,6 +25,8 @@
 		<button class="sideButton" on:click={() => changePage(Projects)}>Projects</button>
 		<button class="sideButton" on:click={() => changePage(About)}>About</button>
 		<button class="sideButton" on:click={() => changePage(Contact)}>Contact</button>
+
+		<p class="version">v2.0.0</p>
 	</div>
 
 	<svelte:component this={Page} />
