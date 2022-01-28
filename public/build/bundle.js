@@ -1594,7 +1594,7 @@ var app = (function () {
     			button3.textContent = "Contact";
     			t8 = space();
     			p = element("p");
-    			p.textContent = "v2.0.21";
+    			p.textContent = "v2.0.1";
     			t10 = space();
     			if (switch_instance) create_component(switch_instance.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = "/heliodex.png")) attr_dev(img, "src", img_src_value);
