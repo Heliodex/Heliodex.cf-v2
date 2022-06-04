@@ -1,7 +1,8 @@
-import App from './App.svelte';
+import App from './App.svelte'
+import './style.sass'
 
-var app = new App({
-	target: document.body
-});
+const app = new App({
+  target: document.getElementById('app')
+})
 
-export default app;
+export default app
