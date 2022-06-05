@@ -21,7 +21,7 @@
 			<a class="realLink" href="https://docsocial.cf/" target="_blank" rel="noopener noreferrer">DocSocial.cf</a><br />
 			<br />
 
-			<img src="src/assets/docsocial.png" alt="DocSocial Logo" width="300" />
+			<img src="docsocial.png" alt="DocSocial Logo" width="300" />
 		</p>
 	</div>
 	<div>
@@ -40,7 +40,7 @@
 			<br />
 			<a class="realLink" href="https://www.youtube.com/watch?v=QwhaqpOL310/" target="_blank" rel="noopener noreferrer">Something big may be coming soon, though...</a><br />
 			<br />
-			<img src="src/assets/hylogos.png" alt="6 different HybridOS Logos throughout the versions" width="300" />
+			<img src="hylogos.png" alt="6 different HybridOS Logos throughout the versions" width="300" />
 		</p>
 	</div>
 
@@ -61,7 +61,7 @@
 			.<br />
 			<br />
 
-			<img src="src/assets/pfcalc.png" alt="Screenshot of the calculator page" width="300" />
+			<img src="pfcalc.png" alt="Screenshot of the calculator page" width="300" />
 		</p>
 	</div>
 
@@ -82,7 +82,7 @@
 			.<br />
 			<br />
 
-			<img src="src/assets/crazycalc.png" alt="Screenshot of the game" width="300" />
+			<img src="crazycalc.png" alt="Screenshot of the game" width="300" />
 		</p>
 	</div>
 
