@@ -28,7 +28,7 @@
 	<div class="sidenav">
 		<!-- Page side navigation buttons go in this div -->
 
-		<img class="logo" src="src/assets/heliodex.svg" alt="Heliodex Logo" width="80" height="80" />
+		<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" />
 
 		<button class="sideButton" on:mousedown={() => changePage(Home)}>Home</button>
 		<button class="sideButton" on:mousedown={() => changePage(Projects)}>Projects</button>
