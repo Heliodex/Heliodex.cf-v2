@@ -1,2 +1,0 @@
-[context.production]
-  environment = { NODE_VERSION = "16.5.1", NPM_VERSION = "8.8.0" }
