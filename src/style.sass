@@ -1,12 +1,9 @@
-
-$button-width: 70px	
-	
 @font-face
 	font-family: "Heliodex"
 	src: url('assets/heliodex.ttf')
 
 @font-face
-	font-family: "lexendDeca" /* Readex Pro might actually be a better font than Lexend. */
+	font-family: "lexendDeca" // Readex Pro might actually be a better font than Lexend.
 	src: url('assets/ReadexPro.ttf')
 
 body
@@ -19,106 +16,18 @@ p
 	display: inline
 	font-family: lexendDeca, sans-serif
 
-.version
-	text-align: center
-	display: inline-block
-	margin: auto
-
-	position: fixed
-	bottom: 0 // fix to bottom of page
-	left: 0 // be inside rather than outside the sidebar
-	width: $button-width
-
-.realLink:link 
+a
 	color: cyan
-	background-color: transparent
-	text-decoration: underline
-.realLink:visited 
-	color: palevioletred
-	background-color: transparent
-	text-decoration: underline
-.realLink:hover 
-	color: red
-	background-color: transparent
-	text-decoration: underline
-.realLink:active 
-	color: yellow
-	background-color: transparent
-	text-decoration: underline
+	&:visited
+		color: palevioletred
+	&:hover
+		color: red
+	&:active
+		color: yellow
 
 h1
 	font-family: Heliodex, 'Trebuchet MS', sans-serif
 	font-size: 48px
 	font-weight: normal
-	line-height: 0px
+	line-height: 0
 	text-align: center
-
-	display: block
-
-h3
-	font-family: lexendDeca, sans-serif
-
-.sideButton // Stolen straight from DocSocial. lmao
-	border: 0px solid #ffffff
-	background-color: #404040
-	margin: 5px 5px 2px 5px
-	border-radius: 5px
-	font-family: lexendDeca
-	font-size: 14px
-	padding: 5px 0 20px 0
-	height: 20px
-	cursor: pointer
-	color: #e3e3e3
-	width: $button-width
-	display: inline-block
-
-	text-align: center
-	text-decoration: none
-
-.sideButton:hover
-	transition: transform 0.2s
-	transform: scale(1.1)
-	background-color: #303030
-
-.main 
-	margin: 0px 0px 15px 100px /* Width of the sidebar +15 */
-
-/* The sidebar menu */
-.sidenav
-	height: 100%
-	width: 85px // Sidebar width
-	position: fixed // Stay in place when scrolling
-	z-index: 1 // Stay on top
-	top: 0 //Stay at the top
-	left: 0
-	background-color: #202020
-	overflow-x: hidden // Disable horizontal scroll
-	padding-top: 20px
-	padding-left: 5px
-
-/*
-	box-sizing: border-box // what it do? */
-
-
-// Page dual-column code
-@media screen and (min-width: 800px)
-	.projects 
-		display: grid
-		grid-template-columns: auto auto
-
-.project
-	grid-column-gap: 100px
-	padding: 0px 5% 50px 0px
-
-/* Clear floats after the columns */
-.row:after
-	content: ""
-	clear: both
-	display: flex
-	flex-wrap: wrap
-	flex-direction: row
-
-.ipa
-	font-family: Helvetica, Arial, sans-serif // support for phonetic chars
-	line-height: 0px
-	font-size: 16px
