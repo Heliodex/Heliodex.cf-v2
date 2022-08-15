@@ -28,7 +28,8 @@
 	<div class="sidenav">
 		<!-- Page side navigation buttons go in this div -->
 
-		<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" />
+		
+		<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" on:mousedown={() => changePage(Home)} />
 
 		<button on:mousedown={() => changePage(Home)}>Home</button>
 		<button on:mousedown={() => changePage(Projects)}>Projects</button>
@@ -57,6 +58,12 @@
 	.logo
 		padding: 0 5px
 		width: 70px
+		cursor: pointer
+
+		transition: 0.2s
+		&:hover
+			transition: 0.2s
+			transform: scale(1.05)
 
 	button // Stolen straight from DocSocial lmao
 		border: none
