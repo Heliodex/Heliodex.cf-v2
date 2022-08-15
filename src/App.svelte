@@ -1,4 +1,4 @@
-<script defer lang="ts">
+<script lang="ts">
 	import Home from "./lib/Home.svelte"
 	import Projects from "./lib/Projects.svelte"
 	import About from "./lib/About.svelte"
@@ -30,12 +30,12 @@
 
 		<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" />
 
-		<button class="sideButton" on:mousedown={() => changePage(Home)}>Home</button>
-		<button class="sideButton" on:mousedown={() => changePage(Projects)}>Projects</button>
-		<button class="sideButton" on:mousedown={() => changePage(About)}>About</button>
-		<button class="sideButton" on:mousedown={() => changePage(Contact)}>Contact</button>
+		<button on:mousedown={() => changePage(Home)}>Home</button>
+		<button on:mousedown={() => changePage(Projects)}>Projects</button>
+		<button on:mousedown={() => changePage(About)}>About</button>
+		<button on:mousedown={() => changePage(Contact)}>Contact</button>
 
-		<p class="version">v2.1.0</p>
+		<p class="version">v2.2.0</p>
 	</div>
 
 	<svelte:component this={Page} />
@@ -49,7 +49,7 @@
 		z-index: 1 // Stay on top
 		top: 0 //Stay at the top
 		left: 0
-		background-color: #202020
+		background-color: #080808
 		overflow-x: hidden // Disable horizontal scroll
 		padding-top: 20px
 		padding-left: 5px
@@ -58,9 +58,9 @@
 		padding: 0 5px
 		width: 70px
 
-	.sideButton // Stolen straight from DocSocial lmao
+	button // Stolen straight from DocSocial lmao
 		border: none
-		background-color: #404040
+		background-color: #181818
 		margin: 4px 5px
 		border-radius: 5px
 		font-family: lexendDeca
@@ -75,10 +75,11 @@
 		text-align: center
 		text-decoration: none
 
+		transition: 0.2s
 		&:hover
-			transition: transform 0.2s
+			transition: 0.2s
 			transform: scale(1.1)
-			background-color: #303030
+			background: #303030
 
 	.version
 		text-align: center
