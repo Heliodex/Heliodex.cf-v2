@@ -1,8 +1,6 @@
 import App from "./App.svelte"
-import "./style.sass"
+import "./global.sass"
 
-const app = new App({
-	target: document.getElementById("app")
+new App({
+	target: document.body
 })
-
-export default app
