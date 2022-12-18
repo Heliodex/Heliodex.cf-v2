@@ -36,7 +36,7 @@
 		<button on:mousedown={() => changePage(About)}>About</button>
 		<button on:mousedown={() => changePage(Contact)}>Contact</button>
 
-		<p class="version">v2.2.0</p>
+		<p class="version">v2.2.1</p>
 	</div>
 
 	<svelte:component this={Page} />
