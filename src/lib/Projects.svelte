@@ -32,7 +32,7 @@
 				<h2>DocSocial</h2>
 
 				<p>
-					DocSocial is a free, simple messaging application. It is designed to appear like a Google document from a quick glance, or from a look at your browser history.<br />
+					DocSocial is a free, simple messaging application. It was designed to appear like a Google document from a quick glance, or from a look at your browser history.<br />
 					<br />
 					DocSocial uses
 					<a href="https://scaledrone.com/" target="_blank" rel="noopener noreferrer">Scaledrone</a>
@@ -41,6 +41,8 @@
 					It was designed to work best with one specific device and OS, our school-assigned chromebooks, so pupils could chat with others in class and not be caught by a teacher.<br />
 					<a href="https://docsocial.tk/" target="_blank" rel="noopener noreferrer">docsocial.tk</a><br />
 					<a href="https://docsocial.cf/" target="_blank" rel="noopener noreferrer">docsocial.cf</a><br />
+					<br />
+					Its (very disorganised and minified) source code can be found at <a href="https://github.com/DocSocial/DocSocial" target="_blank" rel="noopener noreferrer">github.com/DocSocial/DocSocial</a>.<br />
 					<br />
 
 					<img src="docsocial.png" alt="DocSocial Logo" width="300" />
@@ -60,7 +62,7 @@
 					by UsVsTh3m.<br />
 					<br />
 					Crazy Calculations is playable at
-					<a href="https://www.roblox.com/games/7557207546/" target="_blank" rel="noopener noreferrer">Roblox.com/games/7557207546</a>.<br />
+					<a href="https://www.roblox.com/games/7557207546/" target="_blank" rel="noopener noreferrer">roblox.com/games/7557207546</a>.<br />
 					<br />
 					<img src="crazycalc.png" alt="Screenshot of the game" width="300" />
 				</p>
@@ -91,6 +93,21 @@
 		<!-- Right column -->
 		<div class="column">
 			<div>
+				<h2>Typing Tester</h2>
+
+				<p>
+					Typing Tester is a game that helps to improve your typing accuracy, stamina, and speed. It was released on 25 December 2022 after sixteen months of feature creep.<br />
+					Type words to earn experience and typing tokens, level up and earn ranks, and use typing tokens to buy new wordlists!<br />
+					<br />
+					Typing tester uses several frameworks, including <a href="https://elttob.uk/Fusion/" target="_blank" rel="noopener noreferrer">Fusion</a>, <a href="https://sleitnick.github.io/Knit" target="_blank" rel="noopener noreferrer">Knit</a>, and <a href="https://madstudioroblox.github.io/ProfileService/" target="_blank" rel="noopener noreferrer">ProfileService</a>.<br />
+					<br />
+					The game is playable at <a href="https://www.roblox.com/games/10061236122/" target="_blank" rel="noopener noreferrer">roblox.com/games/10061236122</a>.<br />
+					<br />
+					<img src="typingtester.png" alt="The thumbnail for Typing Tester" class="wide" />
+				</p>
+			</div>
+
+			<div>
 				<h2>Heliodex.cf</h2>
 
 				<p>
@@ -117,9 +134,8 @@
 					<br />
 					<img src="pythoncollection.png" alt="A list of several of the Python programs" class="wide" />
 				</p>
-
 			</div>
-			
+
 			<div>
 				<h2>HybridOS</h2>
 
@@ -132,7 +148,7 @@
 					HybridOS was ported to many different languages, including C, C++, Java, C# (twice), and Batch. Even linux distros were made as well!<br />
 					<br />
 					HybridOS was largely abandoned after the beginning of 2020, and the code for the first Python version has been released on my Github page.<br />
-					<a href="https://github.com/HelioDex/HybridOS/" target="_blank" rel="noopener noreferrer">github.com/Heliodex/HybridOS</a>
+					<a href="https://github.com/Heliodex/HybridOS/" target="_blank" rel="noopener noreferrer">github.com/Heliodex/HybridOS</a>
 					<br />
 					<a href="https://www.youtube.com/watch?v=QwhaqpOL310/" target="_blank" rel="noopener noreferrer">Something big may be coming soon, though...</a><br />
 					<br />
@@ -162,7 +178,7 @@
 	h2
 		text-align: center
 		margin-top: 0
-		font-family: lexendDeca, sans-serif
+		font-family: lexendDeca, "Readex Pro", "Lexend Deca", sans-serif
 
 	iframe, img
 		border-radius: 1rem
