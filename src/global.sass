@@ -1,15 +1,15 @@
 @font-face
-	font-family: "Heliodex"
-	src: url("/heliodex.ttf")
+	font-family: Heliodex
+	src: url("/heliodex.woff2") format("woff2"), url("/heliodex.woff") format("woff"), url("/heliodex.otf") format("opentype")
 
 @font-face
-	font-family: "lexendDeca" // Readex Pro might actually be a better font than Lexend.
-	src: url("/ReadexPro.ttf")
+	font-family: lexendDeca
+	src: url("/ReadexPro.woff2") format("woff2"), url("/ReadexPro.woff") format("woff"), url("/ReadexPro.ttf") format("truetype")
 
 :root
-	//background-attachment: fixed
-
+	// background-attachment: fixed
 	height: max(100%, 100vh)
+
 body
 	background: #121212 //linear-gradient(to top left, #202020, #000)
 	color: #e3e3e3
@@ -19,7 +19,7 @@ body
 
 p
 	display: inline
-	font-family: lexendDeca, sans-serif
+	font-family: lexendDeca, "Readex Pro", "Lexend Deca", "Trebuchet MS", sans-serif
 
 a
 	color: cyan
@@ -31,7 +31,7 @@ a
 		color: yellow
 
 h1
-	font-family: Heliodex, "Trebuchet MS", sans-serif
+	font-family: Heliodex, lexendDeca, "Readex Pro", "Lexend Deca", "Trebuchet MS", sans-serif
 	font-size: 48px
 	font-weight: normal
 	line-height: 0
