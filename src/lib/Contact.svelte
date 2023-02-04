@@ -2,7 +2,7 @@
 	import { fly } from "svelte/transition"
 </script>
 
-<div in:fly={{ y: 40 }}>
+<main in:fly={{ y: 40 }}>
 	<h1>Contact</h1>
 	<br />
 
@@ -29,4 +29,4 @@
 		Email: Heli@odex.cf,
 		<a href="mailto:Heli@odex.cf" target="_blank" rel="noopener noreferrer">heli@odex.cf</a><br />
 	</p>
-</div>
+</main>

@@ -24,23 +24,22 @@
 	}
 </script>
 
-<main>
-	<div class="sidenav">
-		<!-- Page side navigation buttons go in this div -->
+<div class="sidenav">
+	<!-- Page side navigation buttons go in this div -->
 
-		
-		<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" on:mousedown={() => changePage(Home)} />
+	<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" on:mousedown={() => changePage(Home)} />
 
-		<button on:mousedown={() => changePage(Home)}>Home</button>
-		<button on:mousedown={() => changePage(Projects)}>Projects</button>
-		<button on:mousedown={() => changePage(About)}>About</button>
-		<button on:mousedown={() => changePage(Contact)}>Contact</button>
+	<button on:mousedown={() => changePage(Home)}>Home</button>
+	<button on:mousedown={() => changePage(Projects)}>Projects</button>
+	<button on:mousedown={() => changePage(About)}>About</button>
+	<button on:mousedown={() => changePage(Contact)}>Contact</button>
 
-		<p class="version">v2.2.1</p>
-	</div>
+	<p class="version">v2.2.2</p>
+</div>
 
+<div id="all">
 	<svelte:component this={Page} />
-</main>
+</div>
 
 <style lang="sass">
 	.sidenav
@@ -98,6 +97,6 @@
 		left: 0 // be inside rather than outside the sidebar
 		width: 70px
 
-	main
+	#all
 		margin: 0 0 15px 100px // Width of the sidebar +15
 </style>

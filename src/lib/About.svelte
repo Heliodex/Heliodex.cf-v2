@@ -2,7 +2,7 @@
 	import { fly } from "svelte/transition"
 </script>
 
-<div in:fly={{ y: 40 }}>
+<main in:fly={{ y: 40 }}>
 	<h1>About</h1>
 	<br />
 
@@ -20,7 +20,7 @@
 		text go here<br />
 		todo: about page
 	</p>
-</div>
+</main>
 
 <style lang="sass">
 	.ipa
