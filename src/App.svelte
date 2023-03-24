@@ -9,16 +9,15 @@
 		projects: Projects,
 		about: About,
 		contact: Contact,
-	} // Yanderedev lookin
-	// it cannot be the other way around, with Home: "#home"
-
-	function getKeyByValue(object, value) {
-		return Object.keys(object).find(key => object[key] === value)
 	}
+	// it cannot be the other way around, with Home: ""
+
+	const getKeyByValue = (object, value) =>
+		Object.keys(object).find(key => object[key] == value)
 
 	let Page = pageDict[window.location.hash.substring(1)]
 
-	function changePage(whichPage) {
+	const changePage = whichPage => () => {
 		Page = whichPage // If done in the same line, the svelte:component will not react
 		window.location.hash = getKeyByValue(pageDict, whichPage)
 	}
@@ -27,12 +26,19 @@
 <div class="sidenav">
 	<!-- Page side navigation buttons go in this div -->
 
-	<img class="logo" src="heliodex.svg" alt="Heliodex Logo" width="80" height="80" on:mousedown={() => changePage(Home)} />
+	<img
+		class="logo"
+		src="heliodex.svg"
+		alt="Heliodex Logo"
+		width="80"
+		height="80"
+		on:mousedown={() => changePage(Home)}
+	/>
 
-	<button on:mousedown={() => changePage(Home)}>Home</button>
-	<button on:mousedown={() => changePage(Projects)}>Projects</button>
-	<button on:mousedown={() => changePage(About)}>About</button>
-	<button on:mousedown={() => changePage(Contact)}>Contact</button>
+	<button on:mousedown={changePage(Home)}>Home</button>
+	<button on:mousedown={changePage(Projects)}>Projects</button>
+	<button on:mousedown={changePage(About)}>About</button>
+	<button on:mousedown={changePage(Contact)}>Contact</button>
 
 	<p class="version">v2.2.2</p>
 </div>
@@ -69,7 +75,6 @@
 		background-color: #181818
 		margin: 4px 5px
 		border-radius: 5px
-		font-family: lexendDeca
 		font-size: 14px
 		padding: 5px 0 20px 0
 		height: 20px
