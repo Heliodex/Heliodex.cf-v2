@@ -178,7 +178,6 @@
 	h2
 		text-align: center
 		margin-top: 0
-		font-family: lexendDeca, "Readex Pro", "Lexend Deca", sans-serif
 
 	iframe, img
 		border-radius: 1rem
