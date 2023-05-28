@@ -150,7 +150,7 @@
 					HybridOS was largely abandoned after the beginning of 2020, and the code for the first Python version has been released on my Github page.<br />
 					<a href="https://github.com/Heliodex/HybridOS/" target="_blank" rel="noopener noreferrer">github.com/Heliodex/HybridOS</a>
 					<br />
-					<a href="https://www.youtube.com/watch?v=QwhaqpOL310/" target="_blank" rel="noopener noreferrer">Something big may be coming soon, though...</a><br />
+					<a href="https://www.youtube.com/watch?v=aDnko4d1wdk/" target="_blank" rel="noopener noreferrer">Something big may be coming soon, though...</a><br />
 					<br />
 					<img src="hylogos.png" alt="6 different HybridOS Logos throughout the versions" width="300" />
 				</p>
