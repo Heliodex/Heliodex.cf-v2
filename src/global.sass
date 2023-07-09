@@ -1,0 +1,40 @@
+@font-face
+	font-family: Heliodex
+	src: url("/Heliodex.woff2") format("woff2"), url("/Heliodex.woff") format("woff"), url("/Heliodex.otf") format("opentype")
+
+@font-face
+	font-family: "Readex Pro"
+	src: url("/Lexend.woff2") format("woff2")
+
+:root
+	// background-attachment: fixed
+	height: max(100%, 100vh)
+
+body
+	background: black
+	color: #e3e3e3
+
+	text-align: left
+	overflow-x: hidden
+
+p
+	display: inline
+
+p, td, button, h2
+	font-family: "Readex Pro", "Lexend Deca", sans-serif
+
+a
+	color: cyan
+	&:visited
+		color: palevioletred
+	&:hover
+		color: red
+	&:active
+		color: yellow
+
+h1
+	font-family: Heliodex, "Readex Pro", "Lexend Deca", sans-serif
+	font-size: 48px
+	font-weight: normal
+	line-height: 0
+	text-align: center
