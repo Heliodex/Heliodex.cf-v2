@@ -1,0 +1,10 @@
+{
+	"names": {
+		"heliodex": "f04fe72fad5be03c59b4ae169e995cff6bf978be0495e88c7303f8e1c578a5e6"
+	},
+	"relays": {
+		"f04fe72fad5be03c59b4ae169e995cff6bf978be0495e88c7303f8e1c578a5e6": [
+			"wss://nostr.heliodex.cf"
+		]
+	}
+}
